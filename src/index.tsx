@@ -1,14 +1,12 @@
 import React from "react";
 import { render } from "react-dom";
+import App from "./App";
 
-import "./index.scss";
+import "./styles/main.scss";
 
-function App(): JSX.Element {
-  return (
-    <div>
-      <h1>It works!</h1>
-    </div>
-  );
-}
-
-render(<App />, document.getElementById("app"));
+render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("app")
+);
