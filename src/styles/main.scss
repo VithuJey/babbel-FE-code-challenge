@@ -1,0 +1,52 @@
+@use "./base/reset";
+
+.matchId {
+  text-align: right;
+  p {
+  }
+}
+
+.title {
+  margin-top: 5rem;
+  text-align: center;
+  h1 {
+    font-size: clamp(26px, 5vw, 5rem);
+    font-weight: 600;
+    line-height: 100px;
+  }
+}
+
+.target {
+  text-align: center;
+  p {
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 3rem;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .cards {
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+}
