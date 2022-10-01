@@ -1,0 +1,104 @@
+.card {
+  width: 90%;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+  .name {
+  }
+  .score {
+    width: 100%;
+  }
+  img {
+    width: 160px;
+    border-radius: 100%;
+    border: 2px solid black;
+  }
+  button {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .card {
+    width: 13rem;
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+    .name {
+    }
+    .score {
+      width: 100%;
+    }
+    img {
+      width: 120px;
+      border-radius: 100%;
+      border: 2px solid black;
+    }
+    button {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .card {
+    width: 13rem;
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+    .name {
+    }
+    .score {
+      width: 100%;
+    }
+    img {
+      width: 120px;
+      border-radius: 100%;
+      border: 2px solid black;
+    }
+    button {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .card {
+    width: 13rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+    .name {
+    }
+    .score {
+      width: 100%;
+    }
+    img {
+      width: 140px;
+      border-radius: 100%;
+      border: 2px solid black;
+    }
+    button {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+}
