@@ -1,24 +1,30 @@
 import React from "react";
+import { CardProps } from "../../types/component.type";
 
 import "./card.scss";
 
-type CardProps = {
-  name: string;
-  imageUrl: string;
-  score: string;
-};
-
 export default function Card({
-  name,
-  imageUrl,
+  index,
+  player,
   score,
+  currentPlayerId,
+  roll,
 }: CardProps): JSX.Element {
   return (
     <div className="card">
-      <p className="name">{name}</p>
-      <img src={imageUrl} alt="avatar" />
+      <p className="name">{player.name}</p>
+      <img src={player.imageUrl} alt="avatar" />
       <p className="score">Score: {score}</p>
-      <button>Roll</button>
+      <button
+        onClick={() => roll(index)}
+        disabled={player.id !== currentPlayerId}
+      >
+        {currentPlayerId == null
+          ? "Dice down"
+          : player.id !== currentPlayerId
+          ? "Wait"
+          : "Roll"}
+      </button>
     </div>
   );
 }
