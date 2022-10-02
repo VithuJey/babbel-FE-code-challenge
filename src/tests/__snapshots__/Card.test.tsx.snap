@@ -7,7 +7,7 @@ exports[`Card component Matches the snapshot 1`] = `
   <p
     className="name"
   >
-    Sam
+    Player 1
   </p>
   <img
     alt="avatar"
@@ -17,10 +17,13 @@ exports[`Card component Matches the snapshot 1`] = `
     className="score"
   >
     Score: 
-    0
+    10
   </p>
-  <button>
-    Roll
+  <button
+    disabled={true}
+    onClick={[Function]}
+  >
+    Dice down
   </button>
 </div>
 `;

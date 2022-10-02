@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal component Matches the snapshot 1`] = `
+<div
+  className="modal-block"
+>
+  <div
+    className="modal-content"
+  >
+    <span
+      className="close"
+      onClick={[Function]}
+    >
+      ×
+    </span>
+    <h2>
+      We got a winner!
+    </h2>
+    <img
+      alt="avatar"
+      src="../../public/1.png"
+    />
+    <p
+      className="name"
+    >
+      Player 1
+    </p>
+    <button
+      onClick={[Function]}
+    >
+      Roll again
+    </button>
+  </div>
+</div>
+`;
