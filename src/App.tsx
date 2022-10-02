@@ -74,8 +74,12 @@ export default function App(): JSX.Element {
   };
 
   // if game details API not working
-  if (!gameDetails || !scores || !currentPlayerId)
-    return <h2>Get ready to play!</h2>;
+  if (!gameDetails || !scores)
+    return (
+      <div className="div-center">
+        <h1>Get ready to play!</h1>
+      </div>
+    );
 
   return (
     <Layout>
@@ -84,12 +88,12 @@ export default function App(): JSX.Element {
           <p>Match ID: {gameDetails.matchId}</p>
         </div>
         <div className="title">
-          <h1>Dice Wise</h1>
+          <h1>DICE WISE</h1>
         </div>
         <div className="target">
           <p>Score to win: {gameDetails.scoreToWin}</p>
         </div>
-        <div className="cards">
+        <div className="cards-wrapper">
           {gameDetails?.players.map((player, index) => (
             <Card
               key={player.id}

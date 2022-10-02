@@ -15,7 +15,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background: white;
+    background: $bg;
     width: 70%;
     height: 50%;
     top: 50%;
@@ -24,23 +24,31 @@
     padding: 2rem;
     box-sizing: border-box;
 
+    h2 {
+      font-size: 18px;
+    }
+
     img {
-      width: 160px;
+      width: 120px;
       border-radius: 100%;
-      border: 2px solid black;
+      border: 2px solid $primary;
+    }
+
+    button {
+      width: 85%;
     }
   }
 
   .close {
     width: 100%;
-    color: $secondary;
+    color: $primary;
     text-align: right;
     font-size: 22px;
     font-weight: bold;
 
     &:hover,
     &:focus {
-      color: $tertiary;
+      color: $primary;
       text-decoration: none;
       cursor: pointer;
     }
@@ -51,28 +59,48 @@
   display: none;
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .modal-block {
     .modal-content {
-      position: fixed;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      background: white;
-      width: 30%;
-      height: 50%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 2rem;
-      box-sizing: border-box;
+      width: 60%;
+      height: 55%;
+
+      h2 {
+        font-size: 22px;
+      }
 
       img {
         width: 160px;
-        border-radius: 100%;
-        border: 2px solid black;
+      }
+
+      button {
+        width: 40%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .modal-block {
+    .modal-content {
+      width: 40%;
+
+      h2 {
+        font-size: 26px;
+      }
+
+      button {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .modal-block {
+    .modal-content {
+      button {
+        width: 40%;
       }
     }
   }

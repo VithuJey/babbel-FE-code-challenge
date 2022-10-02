@@ -3,6 +3,16 @@ import { CardProps } from "../../types/component.type";
 
 import "./card.scss";
 
+const getButtonText = (
+  currentPlayerId: string | null,
+  playerId: string
+): string =>
+  currentPlayerId == null
+    ? "Game end"
+    : playerId !== currentPlayerId
+    ? "Wait"
+    : "Roll";
+
 export default function Card({
   index,
   player,
@@ -19,11 +29,7 @@ export default function Card({
         onClick={() => roll(index)}
         disabled={player.id !== currentPlayerId}
       >
-        {currentPlayerId == null
-          ? "Dice down"
-          : player.id !== currentPlayerId
-          ? "Wait"
-          : "Roll"}
+        {getButtonText(currentPlayerId, player.id)}
       </button>
     </div>
   );

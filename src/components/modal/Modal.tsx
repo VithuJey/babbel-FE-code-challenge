@@ -1,5 +1,7 @@
 import React from "react";
 import { ModalProps } from "../../types/component.type";
+import Confetti from "react-confetti";
+
 import "./modal.scss";
 
 export default function Modal({
@@ -12,6 +14,8 @@ export default function Modal({
 
   return (
     <div className={modalStyle}>
+      <Confetti width={4000} height={4000} numberOfPieces={1000} wind={0.03} />
+
       <div className="modal-content">
         <span
           className="close"
@@ -31,7 +35,7 @@ export default function Modal({
             setShowModal(false);
           }}
         >
-          Roll again
+          Play again
         </button>
       </div>
     </div>
