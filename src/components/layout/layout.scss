@@ -9,7 +9,6 @@
   }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .container {
     > div {
@@ -18,7 +17,6 @@
   }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .container {
     > div {
@@ -28,11 +26,9 @@
   }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .container {
     > div {
-      padding: 3rem;
       padding-left: 6rem;
       padding-right: 6rem;
     }
