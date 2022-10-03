@@ -22,6 +22,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 2rem;
+    padding-bottom: 4rem;
     box-sizing: border-box;
 
     h2 {
@@ -43,8 +44,7 @@
     width: 100%;
     color: $primary;
     text-align: right;
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 24px;
 
     &:hover,
     &:focus {

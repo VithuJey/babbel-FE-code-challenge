@@ -85,13 +85,17 @@ export default function App(): JSX.Element {
     <Layout>
       <div>
         <div className="matchId">
-          <p>Match ID: {gameDetails.matchId}</p>
+          <p>
+            Match ID: <span>{gameDetails.matchId}</span>
+          </p>
         </div>
         <div className="title">
           <h1>DICE WISE</h1>
         </div>
         <div className="target">
-          <p>Score to win: {gameDetails.scoreToWin}</p>
+          <p>
+            Score to win: <span>{gameDetails.scoreToWin}</span>
+          </p>
         </div>
         <div className="cards-wrapper">
           {gameDetails?.players.map((player, index) => (

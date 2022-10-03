@@ -24,7 +24,9 @@ export default function Card({
     <div className="card">
       <p className="name">{player.name}</p>
       <img src={player.imageUrl} alt="avatar" />
-      <p className="score">Score: {score}</p>
+      <p className="score">
+        Score: <span>{score}</span>
+      </p>
       <button
         onClick={() => roll(index)}
         disabled={player.id !== currentPlayerId}
