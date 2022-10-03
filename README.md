@@ -32,9 +32,9 @@ npm run start
 
 React web app: http://localhost:8080
 
-Node server: http://localhost:8000 (BTW thank you trusty BE developer for the solid API 😉)
+Node server: http://localhost:8000
 
-## Why choose these libraries?
+## Newly installed libraries
 
 | Library      | Reason                                                     |
 | :----------- | :--------------------------------------------------------- |
