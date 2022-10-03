@@ -10,7 +10,7 @@
     "test": "jest --config jest.json",
     "start": "concurrently --kill-others \"npm run start:server\" \"npm run start:app\"",
     "start:server": "babel-node api/index.js",
-    "start:app": "webpack-dev-server --hot"
+    "start:app": "webpack-dev-server --host 0.0.0.0 --hot"
   },
   "author": "Babbel (Lesson Nine GmbH)",
   "license": "ISC",

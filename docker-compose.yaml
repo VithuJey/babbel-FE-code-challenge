@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  babbel-app:
+    build: ./
+    container_name: /babbel-cont
+    ports:
+      - "8080:8080"
+      - "8000:8000"
