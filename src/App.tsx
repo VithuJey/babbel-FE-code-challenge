@@ -40,12 +40,37 @@ export default function App(): JSX.Element {
     getGameDetails();
   }, []);
 
-  // handle dice roll
-  const rollDice = (index: number) => {
-    if (!gameDetails || !scores || !currentPlayerId) return;
+  // find the current player object who won and set to winner
+  const handleWin = () => {
+    if (!gameDetails || !currentPlayerId) return;
 
-    let rolledNum = getDiceNum();
-    // calculate the new score
+    const currentPlayer = gameDetails.players.find(
+      (player: PlayerType) => player.id === currentPlayerId
+    );
+
+    !!currentPlayer && setWinner(currentPlayer);
+    postWinner(currentPlayerId, gameDetails?.matchId);
+    // set currentPlayerId to emplty string if the winner is found
+    setCurrentPlayerId(null);
+    setShowModal(true);
+  };
+
+  // update the currentPlayerId by setting next player's id
+  const findNextPlayer = (index: number) => {
+    if (!gameDetails) return;
+
+    let players = gameDetails?.players;
+    let nextPlayerIndex = index == players.length - 1 ? 0 : index + 1;
+    setCurrentPlayerId(players[nextPlayerIndex].id);
+  };
+
+  // calculate the new score and update scores
+  const updateScore = (
+    index: number,
+    rolledNum: number
+  ): number | undefined => {
+    if (!scores) return;
+
     let newScore = scores[index] + rolledNum;
 
     setScores((prevScores: Array<number> | undefined) => {
@@ -54,22 +79,21 @@ export default function App(): JSX.Element {
       return [...prevScores];
     });
 
-    // if the newScore is >= to scoreToWin assign the winner by setWinner
-    if (newScore >= gameDetails.scoreToWin) {
-      // find the winning curent player object and set to winner
-      const currentPlayer = gameDetails.players.find(
-        (player: PlayerType) => player.id === currentPlayerId
-      );
-      !!currentPlayer && setWinner(currentPlayer);
-      postWinner(currentPlayerId, gameDetails?.matchId);
-      // set currentPlayerId to emplty string if the winner is found
-      setCurrentPlayerId(null);
-      setShowModal(true);
+    return newScore;
+  };
+
+  // handle dice roll
+  const rollDice = (index: number) => {
+    if (!gameDetails || !scores || !currentPlayerId) return;
+
+    let rolledNum = getDiceNum();
+
+    let newScore = updateScore(index, rolledNum);
+
+    if (!!newScore && newScore >= gameDetails.scoreToWin) {
+      handleWin();
     } else {
-      // update the currentPlayerId to next player's id
-      let players = gameDetails?.players;
-      let nextPlayerIndex = index == players.length - 1 ? 0 : index + 1;
-      setCurrentPlayerId(players[nextPlayerIndex].id);
+      findNextPlayer(index);
     }
   };
 
