@@ -1,0 +1,36 @@
+@use "../../styles/abstracts/colors" as *;
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: $bg;
+  > div {
+    padding: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    > div {
+      padding: 3rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container {
+    > div {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    > div {
+      padding-left: 6rem;
+      padding-right: 6rem;
+    }
+  }
+}

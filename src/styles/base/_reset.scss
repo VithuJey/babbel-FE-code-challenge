@@ -1,0 +1,55 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/fonts" as *;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-family: $primaryFont;
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 600;
+  line-height: 100px;
+  color: $primary;
+}
+
+h2 {
+  font-family: $primaryFont;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 0;
+  color: $primary;
+}
+
+p {
+  font-family: $primaryFont;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 28px;
+  color: $primary;
+}
+
+span {
+  font-weight: 500;
+}
+
+button {
+  padding: 1rem;
+  font-family: $primaryFont;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 10px;
+  color: $primary;
+  background-color: $bg;
+  border: 2.5px solid black;
+  cursor: pointer;
+
+  &:disabled {
+    color: $primary;
+    background-color: rgba(0, 0, 0, 0.18);
+    border-color: rgba(0, 0, 0, 0.18);
+    cursor: not-allowed;
+  }
+}

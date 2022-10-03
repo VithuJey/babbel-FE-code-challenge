@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card component Matches the snapshot 1`] = `
+<div
+  className="card"
+>
+  <p
+    className="name"
+  >
+    Player 1
+  </p>
+  <img
+    alt="avatar"
+    src="../../public/1.png"
+  />
+  <p
+    className="score"
+  >
+    Score: 
+    10
+  </p>
+  <button
+    disabled={true}
+    onClick={[Function]}
+  >
+    Dice down
+  </button>
+</div>
+`;
